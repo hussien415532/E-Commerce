@@ -36,7 +36,7 @@ boxes.forEach((box) => {
     let target = e.target;
     console.log(target);
     localStorage.setItem("imgSrc", target.getAttribute("src"));
-    location.pathname = "/sproduct.html";
+ location.pathname = "/sproduct.html" ||"E-Commerce/sproduct.html" ;
   });
 });
 if (location.pathname == "/sproduct.html") {

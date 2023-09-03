@@ -40,7 +40,10 @@ boxes.forEach((box) => {
     spLink.click();
   });
 });
-if (location.pathname.includes("sproduct.html")) {
-  let sproductImg = document.querySelector(".sproduct-img");
-  sproductImg.setAttribute("src", localStorage.getItem("imgSrc"));
+window.onload=()=>{
+
+  if (location.pathname.includes("sproduct.html")) {
+    let sproductImg = document.querySelector(".sproduct-img");
+    sproductImg.setAttribute("src", localStorage.getItem("imgSrc"));
+  }
 }

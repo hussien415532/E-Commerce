@@ -1,5 +1,6 @@
 let boxes = Array.from(document.querySelectorAll(".box"));
 let boxImgs = Array.from(document.querySelectorAll(".box img"));
+spLink = document.querySelector(".sp-link");
 let productName = Array.from(document.querySelectorAll(".box .product_name"));
 let productCost = Array.from(document.querySelectorAll(".box .product_cost"));
 let carts = Array.from(document.querySelectorAll(".cart"));
@@ -36,12 +37,10 @@ boxes.forEach((box) => {
     let target = e.target;
     console.log(target);
     localStorage.setItem("imgSrc", target.getAttribute("src"));
-    location.pathname = "/sproduct.html";
+    spLink.click();
   });
 });
-if (location.pathname == "/sproduct.html") {
+if (location.pathname.includes("sproduct.html")) {
   let sproductImg = document.querySelector(".sproduct-img");
   sproductImg.setAttribute("src", localStorage.getItem("imgSrc"));
 }
-
-

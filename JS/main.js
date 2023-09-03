@@ -45,11 +45,3 @@ if (location.pathname == "/sproduct.html") {
 }
 
 
-window.addEventListener("resize", () => {
-  var sidebarNav = document.getElementById("sidebarNav");
-  if (window.innerWidth < 992) {
-    sidebarNav.classList.add("show");
-  } else {
-    sidebarNav.classList.remove("show");
-  }
-});
